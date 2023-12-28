@@ -34,3 +34,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# intelliJ
+/.idea/
+
+# npm
+package-lock.json
+
+# yarn
+yarn.lock
