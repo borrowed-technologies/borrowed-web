@@ -44,3 +44,6 @@ package-lock.json
 # yarn
 yarn.lock
 
+# Removing Test UI for React experiments
+
+./pages/
