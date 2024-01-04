@@ -111,6 +111,15 @@ function DashboardContent() {
             >
               <MenuIcon />
             </IconButton>
+            <IconButton onClick={toggleDrawer}
+            edge="start"
+                          sx={{
+                            marginRight: '36px',
+                            ...(!open && { display: 'none' }),
+                          }}
+            >
+              <ChevronLeftIcon />
+            </IconButton>
             <Typography
               component="h1"
               variant="h6"
@@ -121,7 +130,7 @@ function DashboardContent() {
               Dashboard
             </Typography>
             <IconButton color="inherit">
-              <Badge badgeContent={4} color="secondary">
+              <Badge badgeContent={5} color="secondary">
                 <NotificationsIcon />
               </Badge>
             </IconButton>
@@ -136,9 +145,18 @@ function DashboardContent() {
               px: [1],
             }}
           >
-            <IconButton onClick={toggleDrawer}>
+                        <Typography
+              // component="h1"
+              variant="h6"
+              color="inherit"
+              // noWrap
+              sx={{ flexGrow: 2 }}
+            >
+              Menu Items
+            </Typography>
+            {/* <IconButton onClick={toggleDrawer}>
               <ChevronLeftIcon />
-            </IconButton>
+            </IconButton> */}
           </Toolbar>
           <Divider />
           <List component="nav">
@@ -204,5 +222,7 @@ function DashboardContent() {
 }
 
 export default function Dashboard() {
-  return <DashboardContent />;
+  return (
+  <DashboardContent />
+  );
 }

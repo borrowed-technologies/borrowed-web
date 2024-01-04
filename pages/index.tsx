@@ -9,8 +9,10 @@ import Dashboard from '../src/dashboard/Dashboard';
 
 export default function Home() {
   return (
-    <Container maxWidth="lg">
+    // <Container>
+    <Box>
         <Dashboard />
-    </Container>
+    </Box>
+    // </Container>
   );
 }
