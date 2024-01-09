@@ -84,13 +84,13 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 const mdTheme = createTheme();
 
 function DashboardContent() {
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
   const toggleDrawer = () => {
     setOpen(!open);
   };
 
   return (
-    <ThemeProvider theme={mdTheme}>
+    // <ThemeProvider theme={mdTheme}>
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
         <AppBar position="absolute" open={open}>
@@ -167,15 +167,15 @@ function DashboardContent() {
         </Drawer>
         <Box
           component="main"
-          sx={{
-            backgroundColor: (theme) =>
-              theme.palette.mode === 'light'
-                ? theme.palette.grey[100]
-                : theme.palette.grey[900],
-            flexGrow: 1,
-            height: '100vh',
-            overflow: 'auto',
-          }}
+          // sx={{
+          //   backgroundColor: (theme) =>
+          //     theme.palette.mode === 'light'
+          //       ? theme.palette.grey[100]
+          //       : theme.palette.grey[900],
+          //   flexGrow: 1,
+          //   height: '100vh',
+          //   overflow: 'auto',
+          // }}
         >
           <Toolbar />
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
@@ -217,7 +217,7 @@ function DashboardContent() {
           </Container>
         </Box>
       </Box>
-    </ThemeProvider>
+    // {/* </ThemeProvider> */}
   );
 }
 
